@@ -80,13 +80,17 @@ class _FiltersScreenState extends State<FiltersScreen> {
               child: ListView(
                 children: <Widget>[
                   _buildSwitchListTile(
-                      'Gluten-free',
-                      'Only include gluten-free meals.',
-                      _glutenFree, (newValue) {
-                    setState(() {
-                      _glutenFree = newValue;
-                    });
-                  }),
+                    'Gluten-free',
+                    'Only include gluten-free meals.',
+                    _glutenFree,
+                    (newValue) {
+                      setState(
+                        () {
+                          _glutenFree = newValue;
+                        },
+                      );
+                    },
+                  ),
                   _buildSwitchListTile(
                       'Lactose-free',
                       'Only include lactose-free meals.',
